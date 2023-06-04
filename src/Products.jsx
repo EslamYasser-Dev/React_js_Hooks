@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+
+
 
  function Products() {
+
+    const [data, setthisData] = useState({})
+
   return (
     <div>Products</div>
   )
