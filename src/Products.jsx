@@ -3,19 +3,19 @@ import products from './ProductData'
 function Products() {
   const [data, setData] = useState(products);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://fakestoreapi.com/products/1');
-        const jsonData = await response.json();
-        setData(jsonData);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  // useEffect(() => {
+    // const fetchData = async () => {
+    //   try {
+    //     const response = await fetch('https://fakestoreapi.com/products/1');
+    //     const jsonData = await response.json();
+    //     setData(jsonData);
+    //   } catch (error) {
+    //     console.error('Error fetching data:', error);
+    //   }
+    // };
 
-    fetchData();
-  }, []);
+  //   // fetchData();
+  // }, []);
 
   return (
     <div>
