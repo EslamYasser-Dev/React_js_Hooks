@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-
+import products from './ProductData'
 function Products() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(products);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://dummyjson.com/products');
+        const response = await fetch('https://fakestoreapi.com/products/1');
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
@@ -21,11 +21,11 @@ function Products() {
     <div>
 
 
-       {data.products.map((product) => (
+       {products.map((product) => (
         <div key={product.id}>
-          <img src={product.img} alt="its an img" width="30vh" height="40vh" />
+          <img src={product.img} alt="its an img" width="200vh" height="190vh" />
           <h2>{product.name}</h2>
-          <h3>{product.price}</h3>
+          <h3>{product.price}$</h3>
           <h4>{product.category}</h4>
           <p>{product.description}</p>
         </div>
@@ -35,3 +35,4 @@ function Products() {
 }
 
 export default Products;
+
