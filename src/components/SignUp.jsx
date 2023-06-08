@@ -55,7 +55,8 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Do something with the user's login data, for example, make a post request to a backend server
+    window.localStorage.getItem(email)
+    window.sessionStorage.setItem(email,true);//He is login
   };
 
   return (
